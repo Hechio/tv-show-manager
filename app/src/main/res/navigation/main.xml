@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/showListsFragment">
+
+    <fragment
+        android:id="@+id/showListsFragment"
+        android:name="com.stevehechio.apps.tvshowmanager.ui.fragments.ShowListsFragment"
+        android:label="fragment_show_lists"
+        tools:layout="@layout/fragment_show_lists" >
+        <action
+            android:id="@+id/action_showListsFragment_to_addShowFragment"
+            app:destination="@id/addShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShowFragment"
+        android:name="com.stevehechio.apps.tvshowmanager.ui.fragments.AddShowFragment"
+        android:label="fragment_add_show"
+        tools:layout="@layout/fragment_add_show" />
+</navigation>

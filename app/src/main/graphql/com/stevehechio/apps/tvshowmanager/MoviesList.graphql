@@ -1,0 +1,18 @@
+query MoviesList {
+    movies(order: [createdAt_DESC]) {
+        pageInfo{
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+        edges{
+            node{
+                id
+                title
+                releaseDate
+                seasons
+            }
+        }
+    }
+}

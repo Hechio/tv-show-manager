@@ -1,6 +1,8 @@
 package com.stevehechio.apps.tvshowmanager.data.api
 
+import android.database.AbstractCursor
 import com.apollographql.apollo.ApolloClient
+import com.apollographql.apollo.api.Input
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.fetcher.ApolloResponseFetchers
 import com.apollographql.apollo.rx3.Rx3Apollo
@@ -15,8 +17,8 @@ import javax.inject.Inject
  * Created by stevehechio on 9/4/21
  */
 class TvShowApiService @Inject constructor(private var apolloClient: ApolloClient){
-    fun fetchMovies(): Observable<MoviesListQuery.Movies>{
-        return Rx3Apollo.from(apolloClient.query(MoviesListQuery())
+    fun fetchMovies(cursor: String?): Observable<MoviesListQuery.Movies>{
+        return Rx3Apollo.from(apolloClient.query(MoviesListQuery(cursor = Input.fromNullable(cursor)))
             .toBuilder()
             .responseFetcher(ApolloResponseFetchers.CACHE_FIRST)
             .build()).map { it.data?.movies }

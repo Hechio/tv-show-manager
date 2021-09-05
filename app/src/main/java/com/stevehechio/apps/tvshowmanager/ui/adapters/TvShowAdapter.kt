@@ -12,9 +12,17 @@ import com.stevehechio.apps.tvshowmanager.utils.DateUtils
 /**
  * Created by stevehechio on 9/3/21
  */
-class TvShowAdapter :  ListAdapter<MoviesListQuery.Edge,TvShowAdapter.TVShowHolder>(ShowsDiffUtil()){
+class TvShowAdapter :  RecyclerView.Adapter<TvShowAdapter.TVShowHolder>(){
+    //private var moviesList = ArrayList<MoviesListQuery.Edge?>()
+    private var moviesList = arrayListOf<MoviesListQuery.Edge?>()
+    var onEndOfListReached: (() -> Unit)? = null
 
-    inner class  TVShowHolder(val binding: TvShowListItemBinding): RecyclerView.ViewHolder(binding.root){
+
+    fun addMoviesList(list: List<MoviesListQuery.Edge?>){
+        moviesList.addAll(list)
+        notifyDataSetChanged()
+    }
+    inner class  TVShowHolder(private val binding: TvShowListItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bindViews(movie: MoviesListQuery.Edge){
             binding.tvTitle.text = movie.node?.title ?: ""
             val date: String? = movie.node?.releaseDate?.toString()
@@ -33,23 +41,18 @@ class TvShowAdapter :  ListAdapter<MoviesListQuery.Edge,TvShowAdapter.TVShowHold
     }
 
     override fun onBindViewHolder(holder: TVShowHolder, position: Int) {
-        getItem(position).let { holder.bindViews(it) }
+        if (position == itemCount - 2){
+            onEndOfListReached?.invoke()
+        }
+        moviesList[position].let {
+            if (it != null) {
+                holder.bindViews(it)
+            }
+        }
     }
 
-}
-
-class ShowsDiffUtil: DiffUtil.ItemCallback<MoviesListQuery.Edge>(){
-    override fun areItemsTheSame(
-        oldItem: MoviesListQuery.Edge,
-        newItem: MoviesListQuery.Edge
-    ): Boolean {
-        return oldItem.node?.id  == newItem.node?.id
+    override fun getItemCount(): Int {
+       return moviesList.size
     }
 
-    override fun areContentsTheSame(
-        oldItem: MoviesListQuery.Edge,
-        newItem: MoviesListQuery.Edge
-    ): Boolean {
-      return oldItem == newItem
-    }
 }

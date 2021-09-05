@@ -1,5 +1,5 @@
-query MoviesList {
-    movies(order: [createdAt_DESC]) {
+query MoviesList($cursor: String) {
+    movies(order: [createdAt_DESC],after: $cursor) {
         pageInfo{
             hasNextPage
             hasPreviousPage

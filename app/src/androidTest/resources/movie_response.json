@@ -1,0 +1,29 @@
+{
+  "data": {
+    "movies": {
+      "pageInfo": {
+        "hasNextPage": true,
+        "hasPreviousPage": false,
+        "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+        "endCursor": "YXJyYXljb25uZWN0aW9uOjk5"
+      },
+      "edges": [
+        {
+          "node": {
+            "id": "TW92aWU6cmNBV3JWQk5USw==",
+            "title": "Abcd",
+            "releaseDate": null,
+            "seasons": 1
+          }
+        },
+        {
+          "node": {
+            "id": "TW92aWU6ZkJTY0FITnBOMQ==",
+            "title": "Abcd",
+            "releaseDate": null,
+            "seasons": 1
+          }
+        } ]
+    }
+  }
+}

@@ -30,11 +30,10 @@ The project has been written in Kotlin language. For network requests, it uses A
 Dagger2 has been used for Dependency injection.
 
 ## Architecture
-The project is built using the MVVM architectural pattern and make heavy use of a couple of Android Jetpack components. Mvvm allows for the separation of concern which also makes testing easier. The MVVM pattern is shown in the diagram. 
+The project is built using the MVVM architectural pattern and make heavy use of a couple of Android Jetpack components. Mvvm allows for the separation of concern which also makes testing easier.
 
 
-
-## MVVM diagram
+## MVVM implementation
 The first time the app is opened, the data will be fetched from the backend api service and stored locally with 
 the help of Apollo's SqlNormalizedCacheFactory which stores data in a SQLDelight database and  LruNormalizedCache 
 which stores data in memory.
@@ -55,14 +54,13 @@ All tests are under the Android Test package. All the tests are run using JUnit.
 The app is available in both day and night theme.
 
 
-<img src="" width="200" style="max-width:100%;">   <img src="" width="200" style="max-width:100%;"></br></br>
+<img src="https://user-images.githubusercontent.com/47601553/132138596-4a7c9a6a-7ae0-45fb-a239-ceafb1d7f870.jpg" width="200" style="max-width:100%;">    <img src="https://user-images.githubusercontent.com/47601553/132138675-5d6261cc-6824-4cb8-af66-a16ef1a2c9f7.jpg" width="200" style="max-width:100%;">   <img src="https://user-images.githubusercontent.com/47601553/132138704-d4d86bb7-3cd3-4c9d-8914-8bc83ee57847.jpg" width="200" style="max-width:100%;">    <img src="https://user-images.githubusercontent.com/47601553/132138611-a8eef9c0-be0e-4ea7-92cd-2802ca332a9a.jpg" width="200" style="max-width:100%;"></br></br>
 
 ## Libraries
 
 Libraries used in the whole application are:
 
 - [Viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI related data in a lifecycle conscious way 
-- [Room](https://developer.android.com/training/data-storage/room) - Provides abstraction layer over SQLite
 - [RxJava](https://github.com/ReactiveX/RxJava) - RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.
 - [Kotlin.coroutines](https://developer.android.com/kotlin/coroutines?gclid=Cj0KCQjw1dGJBhD4ARIsANb6Odld-9wkN4Lkm6UJAvWRshusopwstZH5IXkSLzxv_Q5JYjgjozIywfcaAlS9EALw_wcB&gclsrc=aw.ds) - Concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
 - [Dagger2](https://dagger.dev/dev-guide/) - Used for Dependency injection
@@ -72,7 +70,7 @@ Libraries used in the whole application are:
 Kotlin coroutines
 ## Sample App and Source Code
 
-[Sample.App]() - Get APK debug app
-<p><a href=""><img width="150" alt="Get it on Google Drive" src="https://user-images.githubusercontent.com/47601553/128481494-a5347b33-cc5f-4a2a-8d2a-7fc5f6acd41b.jpg" data-canonical-src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Drive.max-1100x1100.png" style="max-width:100%;"></a></p>
+[Sample.App](https://drive.google.com/file/d/1zhJAbgBXnlqnxNtl--YDGQIyXFSyeDG7/view?usp=sharing) - Get APK debug app
+<p><a href="https://drive.google.com/file/d/1zhJAbgBXnlqnxNtl--YDGQIyXFSyeDG7/view?usp=sharing"><img width="150" alt="Get it on Google Drive" src="https://user-images.githubusercontent.com/47601553/128481494-a5347b33-cc5f-4a2a-8d2a-7fc5f6acd41b.jpg" data-canonical-src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Drive.max-1100x1100.png" style="max-width:100%;"></a></p>
 
 [Source.Code](https://github.com/Hechio/tv-show-manager) - Access to the project's github reporitory

@@ -111,4 +111,16 @@ class ShowListsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onResume() {
+        super.onResume()
+        refreshTheMovieList()
+    }
+
+    private fun refreshTheMovieList() {
+        if (mAdapter.itemCount > 0){
+            mAdapter.clearList()
+            moviesListViewModel.getMoviesLists(null)
+        }
+    }
 }

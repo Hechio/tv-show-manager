@@ -20,7 +20,7 @@ class TvShowApiService @Inject constructor(private var apolloClient: ApolloClien
     fun fetchMovies(cursor: String?): Observable<MoviesListQuery.Movies>{
         return Rx3Apollo.from(apolloClient.query(MoviesListQuery(cursor = Input.fromNullable(cursor)))
             .toBuilder()
-            .responseFetcher(ApolloResponseFetchers.CACHE_FIRST)
+            .responseFetcher(ApolloResponseFetchers.NETWORK_FIRST)
             .build()).map { it.data?.movies }
     }
 

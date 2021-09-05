@@ -53,9 +53,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'androidx.paging:paging-runtime-ktx:3.0.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.apollographql.apollo:apollo-runtime:2.5.5'
-    implementation 'com.apollographql.apollo:apollo-rx3-support:2.5.5'
-    implementation 'com.apollographql.apollo:apollo-normalized-cache-sqlite:2.5.5'
+    implementation 'com.apollographql.apollo:apollo-runtime:2.5.9'
+    implementation 'com.apollographql.apollo:apollo-rx3-support:2.5.9'
+    implementation 'com.apollographql.apollo:apollo-normalized-cache-sqlite:2.5.9'
+    implementation("com.apollographql.apollo:apollo-idling-resource:2.5.9")
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
@@ -82,7 +83,6 @@ dependencies {
 
     testImplementation 'org.mockito:mockito-core:3.10.0'
     androidTestImplementation 'org.mockito:mockito-android:3.4.6'
-    implementation("com.apollographql.apollo:apollo-idling-resource:2.5.9")
 
     androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.4.0'
 

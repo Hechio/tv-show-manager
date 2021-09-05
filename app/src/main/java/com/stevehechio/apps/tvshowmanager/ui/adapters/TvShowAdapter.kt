@@ -8,12 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.stevehechio.apps.tvshowmanager.MoviesListQuery
 import com.stevehechio.apps.tvshowmanager.databinding.TvShowListItemBinding
 import com.stevehechio.apps.tvshowmanager.utils.DateUtils
+import com.stevehechio.apps.tvshowmanager.utils.gone
+import com.stevehechio.apps.tvshowmanager.utils.visible
 
 /**
  * Created by stevehechio on 9/3/21
  */
 class TvShowAdapter :  RecyclerView.Adapter<TvShowAdapter.TVShowHolder>(){
-    //private var moviesList = ArrayList<MoviesListQuery.Edge?>()
     private var moviesList = arrayListOf<MoviesListQuery.Edge?>()
     var onEndOfListReached: (() -> Unit)? = null
 
@@ -22,12 +23,20 @@ class TvShowAdapter :  RecyclerView.Adapter<TvShowAdapter.TVShowHolder>(){
         moviesList.addAll(list)
         notifyDataSetChanged()
     }
+
+    fun clearList(){
+        moviesList.clear()
+        notifyDataSetChanged()
+    }
     inner class  TVShowHolder(private val binding: TvShowListItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bindViews(movie: MoviesListQuery.Edge){
             binding.tvTitle.text = movie.node?.title ?: ""
             val date: String? = movie.node?.releaseDate?.toString()
             if (date!=null){
+                binding.tvReleaseDate.visible()
                 binding.tvReleaseDate.text = DateUtils.formatGMTDateStr(date)
+            }else {
+                binding.tvReleaseDate.gone()
             }
 
             binding.tvSeasons.text = movie.node?.seasons.toString()

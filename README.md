@@ -55,7 +55,7 @@ All tests are under the Android Test package. All the tests are run using JUnit.
 The app is available in both day and night theme.
 
 
-<img src="https://user-images.githubusercontent.com/47601553/128050057-1329ee0b-4b62-4c66-af56-38cbb176a643.jpg" width="200" style="max-width:100%;">   <img src="https://user-images.githubusercontent.com/47601553/128050100-f7c220d8-bde2-41ff-92a6-1714fceef7a2.jpg" width="200" style="max-width:100%;"></br></br>
+<img src="" width="200" style="max-width:100%;">   <img src="" width="200" style="max-width:100%;"></br></br>
 
 ## Libraries
 
@@ -72,7 +72,7 @@ Libraries used in the whole application are:
 Kotlin coroutines
 ## Sample App and Source Code
 
-[Sample.App](https://drive.google.com/file/d/1thBIMv_iKiMHpq0gNiEkTk3p0NtIZYM6/view?usp=sharing) - Get APK debug app
-<p><a href="https://drive.google.com/file/d/1thBIMv_iKiMHpq0gNiEkTk3p0NtIZYM6/view?usp=sharing"><img width="150" alt="Get it on Google Drive" src="https://user-images.githubusercontent.com/47601553/128481494-a5347b33-cc5f-4a2a-8d2a-7fc5f6acd41b.jpg" data-canonical-src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Drive.max-1100x1100.png" style="max-width:100%;"></a></p>
+[Sample.App]() - Get APK debug app
+<p><a href=""><img width="150" alt="Get it on Google Drive" src="https://user-images.githubusercontent.com/47601553/128481494-a5347b33-cc5f-4a2a-8d2a-7fc5f6acd41b.jpg" data-canonical-src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Drive.max-1100x1100.png" style="max-width:100%;"></a></p>
 
-[Source.Code](https://github.com/Hechio/payoneer) - Access to the project's github reporitory
+[Source.Code](https://github.com/Hechio/tv-show-manager) - Access to the project's github reporitory

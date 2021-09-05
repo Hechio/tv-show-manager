@@ -16,7 +16,7 @@ This is take way assigment for Combyne recruitment process.
 ## Prerequisite
 
 This project uses the Gradle build system. To build this project, use the
-`gradlew build` command or use "Import Project" in Android Studio.
+`gradlew build` command after cloning or use "Import Project" in Android Studio.
 
 ## The App
 
